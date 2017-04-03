@@ -1,5 +1,7 @@
 FROM ubuntu:16.04
 
+SHELL ["bash", "-c"]
+
 RUN mkdir -p /provision
 
 COPY ./provision/update.sh /provision/

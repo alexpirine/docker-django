@@ -1,7 +1,5 @@
 #! /bin/bash
 
-source ~/.profile
-
 # sets up folders for the applications
 mkdir /app
 cd /app
