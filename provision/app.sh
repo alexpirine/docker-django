@@ -1,6 +1,6 @@
 #! /bin/bash
 
-source ~/.bashrc
+source ~/.profile
 
 # sets up folders for the applications
 mkdir /app
