@@ -1,5 +1,7 @@
 #! /bin/bash
 
+source ~/.bashrc
+
 # sets up folders for the applications
 mkdir /app
 cd /app
