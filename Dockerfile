@@ -19,5 +19,7 @@ RUN /provision/supervisor.sh
 COPY ./provision/app.sh /provision/
 RUN /provision/app.sh
 
+RUN rm -fr /provision
+
 RUN mkdir -p /app/code
 WORKDIR /app/code
