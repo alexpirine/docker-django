@@ -44,6 +44,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 EOF
 cp /etc/skel/.profile ~/
 source ~/.profile
+echo "source ~/.profile" >> ~/.bashrc
 
 # installs supervisor
 apt-get install -y --no-install-recommends supervisor
