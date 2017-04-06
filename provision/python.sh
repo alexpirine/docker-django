@@ -9,5 +9,14 @@ apt-get install -y python3.6 python3.6-dev
 apt-get install -y --no-install-recommends libxml2-dev libxslt1-dev libffi-dev libssl-dev libmysqlclient-dev acl gcc
 
 # installs python-related tools and libraries
-apt-get install -y --no-install-recommends python3-pip python3-setuptools python3-dev python3-wheel
-pip3 install -U pip
+apt-get install -y --no-install-recommends virtualenv python3-virtualenv python3-pip python3-setuptools python3-dev python3-wheel
+pip3 install virtualenvwrapper
+cat >> /etc/skel/.profile << EOF
+
+# Python virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=python3.5
+export WORKON_HOME=\$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+EOF
+cp /etc/skel/.profile ~/
+source ~/.profile
