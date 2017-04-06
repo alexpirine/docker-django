@@ -39,9 +39,15 @@ server {
     access_log /var/log/nginx/access.log;
     error_log /var/log/nginx/error.log;
 
-    add_header Strict-Transport-Security "max-age=31536000" always;
+    add_header Strict-Transport-Security "max-age=31536000";
     ssl_ciphers "ECDH+AES:!aNULL";
     ssl_certificate /etc/letsencrypt/live/localhost/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/localhost/privkey.pem;
 }
 EOF
+
+# needed for certbot
+echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list.d/backports.list
+apt-get update
+
+apt-get install -y certbot -t jessie-backports

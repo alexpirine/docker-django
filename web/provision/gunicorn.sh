@@ -8,7 +8,7 @@ cat > /etc/supervisor/conf.d/gunicorn.conf << EOF
 directory=/app/workdir
 command=/app/code/bin/gunicorn.sh
 user=www-data
-autostart=true
+autostart=false
 autorestart=unexpected
 stopasgroup=true
 stdout_logfile=/app/log/gunicorn-stdout.log
