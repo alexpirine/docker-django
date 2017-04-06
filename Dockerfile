@@ -1,7 +1,5 @@
 FROM python:3.6
 
-SHELL ["bash", "-c"]
-
 RUN mkdir -p /provision
 
 COPY ./provision/update.sh /provision/
