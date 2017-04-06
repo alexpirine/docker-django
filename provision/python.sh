@@ -10,4 +10,4 @@ apt-get install -y --no-install-recommends libxml2-dev libxslt1-dev libffi-dev l
 
 # installs python-related tools and libraries
 apt-get install -y --no-install-recommends python3-pip python3-setuptools python3-dev python3-wheel
-pip install -U pip
+pip3 install -U pip
