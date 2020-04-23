@@ -10,9 +10,6 @@ RUN /provision/update.sh
 COPY ./provision/bash_aliases.sh /provision/
 RUN /provision/bash_aliases.sh
 
-COPY ./provision/supervisor.sh /provision/
-RUN /provision/supervisor.sh
-
 COPY ./provision/app.sh /provision/
 RUN /provision/app.sh
 
